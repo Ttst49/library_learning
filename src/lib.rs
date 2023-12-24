@@ -1,3 +1,5 @@
+use crate::living_room::kitchen;
+
 mod living_room {
     pub mod entrance {
         pub fn add_to_waitlist() {}
@@ -13,7 +15,22 @@ mod living_room {
         fn cash_in() {}
     }
 
-    mod kitchen{
+    pub mod kitchen{
+
+        pub struct Breakfast{
+            pub grilled_toast: String,
+            season_fruit: String
+        }
+
+        impl Breakfast {
+            pub fn in_summer(grilled_toast: &str)->Breakfast{
+                Breakfast{
+                    grilled_toast: String::from(grilled_toast),
+                    season_fruit: String::from("peaches"),
+                }
+            }
+        }
+
         fn cook_order(){}
 
         fn correct_wrong_order(){
@@ -24,6 +41,9 @@ mod living_room {
 }
 
 pub fn eat_at_restaurant(){
-    //crate::living_room::entrance::add_to_waitlist;
-    //living_room::entrance::add_to_waitlist;
+
+    let mut meal = kitchen::Breakfast::in_summer("Seigle");
+    meal.grilled_toast = String::from("blé");
+    println!( "Je voudrais une tartine grillée au {}, s'il vous plaît.",
+              meal.grilled_toast);
 }
