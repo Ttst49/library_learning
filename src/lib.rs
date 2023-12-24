@@ -90,7 +90,11 @@ fn function_using_second_method_using_io()-> io::Result<()>{
 
 }
 
-
+//multi import
 use std::{cmp::Ordering, alloc};
 
+//sub-name import
 use std::env::{self, consts};
+
+//global import
+use std::collections::*;
