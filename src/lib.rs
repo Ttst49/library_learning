@@ -45,7 +45,7 @@ mod living_room {
     }
 }
 
-use crate::living_room::entrance;
+pub use crate::living_room::entrance;
 
 pub fn eat_at_restaurant(){
 
@@ -60,3 +60,37 @@ pub fn eat_at_restaurant(){
     entrance::add_to_waitlist();
     entrance::add_to_waitlist();
 }
+
+//use the same name for 2 use import
+
+use std::fmt::Result;
+use std::io::Result as IoResult;
+//or
+use std::fmt;
+use std::io;
+
+
+//first method
+
+fn function_with_first_method_using_fmt() -> Result {
+
+}
+
+fn function_with_first__method_using_io() -> IoResult<()> {
+
+}
+
+//second method
+
+fn function_using_second_method_using_fmt()-> fmt::Result{
+
+}
+
+fn function_using_second_method_using_io()-> io::Result<()>{
+
+}
+
+
+use std::{cmp::Ordering, alloc};
+
+use std::env::{self, consts};
