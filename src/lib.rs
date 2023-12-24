@@ -1,51 +1,7 @@
-use crate::living_room::kitchen;
+mod restaurant;
 
-mod living_room {
-    pub mod entrance {
-        pub fn add_to_waitlist() {}
-
-        fn bring_to_table() {}
-    }
-
-    pub mod service {
-        fn take_order() {}
-
-        pub fn give_order(){}
-
-        fn cash_in() {}
-    }
-
-    pub mod kitchen{
-
-        pub enum Appetizer{
-            Soup,
-            Salad,
-        }
-
-        pub struct Breakfast{
-            pub grilled_toast: String,
-            season_fruit: String
-        }
-
-        impl Breakfast {
-            pub fn in_summer(grilled_toast: &str)->Breakfast{
-                Breakfast{
-                    grilled_toast: String::from(grilled_toast),
-                    season_fruit: String::from("peaches"),
-                }
-            }
-        }
-
-        fn cook_order(){}
-
-        fn correct_wrong_order(){
-            cook_order();
-            super::service::give_order();
-        }
-    }
-}
-
-pub use crate::living_room::entrance;
+pub use crate::restaurant::living_room::entrance;
+pub use crate::restaurant::living_room::kitchen;
 
 pub fn eat_at_restaurant(){
 
@@ -72,23 +28,23 @@ use std::io;
 
 //first method
 
-fn function_with_first_method_using_fmt() -> Result {
+//fn function_with_first_method_using_fmt() -> Result {
 
-}
+//}
 
-fn function_with_first__method_using_io() -> IoResult<()> {
+//fn function_with_first__method_using_io() -> IoResult<()> {
 
-}
+//}
 
 //second method
 
-fn function_using_second_method_using_fmt()-> fmt::Result{
+//fn function_using_second_method_using_fmt()-> fmt::Result{
 
-}
+//}
 
-fn function_using_second_method_using_io()-> io::Result<()>{
+//fn function_using_second_method_using_io()-> io::Result<()>{
 
-}
+//}
 
 //multi import
 use std::{cmp::Ordering, alloc};
