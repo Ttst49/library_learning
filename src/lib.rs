@@ -17,6 +17,11 @@ mod living_room {
 
     pub mod kitchen{
 
+        pub enum Appetizer{
+            Soup,
+            Salad,
+        }
+
         pub struct Breakfast{
             pub grilled_toast: String,
             season_fruit: String
@@ -44,6 +49,8 @@ pub fn eat_at_restaurant(){
 
     let mut meal = kitchen::Breakfast::in_summer("Seigle");
     meal.grilled_toast = String::from("blé");
-    println!( "Je voudrais une tartine grillée au {}, s'il vous plaît.",
-              meal.grilled_toast);
+    println!( "Je voudrais une tartine grillée au {}, s'il vous plaît.", meal.grilled_toast);
+
+    let order1 = kitchen::Appetizer::Salad;
+    let order1 = kitchen::Appetizer::Soup;
 }
