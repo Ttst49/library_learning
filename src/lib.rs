@@ -45,6 +45,8 @@ mod living_room {
     }
 }
 
+use crate::living_room::entrance;
+
 pub fn eat_at_restaurant(){
 
     let mut meal = kitchen::Breakfast::in_summer("Seigle");
@@ -53,4 +55,8 @@ pub fn eat_at_restaurant(){
 
     let order1 = kitchen::Appetizer::Salad;
     let order1 = kitchen::Appetizer::Soup;
+
+    entrance::add_to_waitlist();
+    entrance::add_to_waitlist();
+    entrance::add_to_waitlist();
 }
